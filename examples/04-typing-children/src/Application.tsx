@@ -8,7 +8,9 @@
  * React.ReactChild[];
  */
 
- type BoxProps = { children: any };
+import {ReactNode} from "react";
+
+ type BoxProps = { children: ReactNode };
 
  const Box = ({ children }: BoxProps) => {
    return (
@@ -17,7 +19,7 @@
      </section>
    );
  };
- 
+
  export default function Application() {
    return (
      <Box>
@@ -33,4 +35,3 @@
      </Box>
    );
  }
- 

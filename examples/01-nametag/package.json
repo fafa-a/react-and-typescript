@@ -11,6 +11,8 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@typescript-eslint/parser": "^5.22.0",
+    "@typescript-eslint/typescript-estree": "^5.22.0",
     "lodash.shuffle": "^4.2.0",
     "prop-types": "15.7.2",
     "react": "17.0.2",
@@ -28,7 +30,7 @@
       "react-app"
     ]
   },
-"browserslist": [
+  "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
