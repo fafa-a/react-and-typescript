@@ -8,13 +8,13 @@
  * React.ReactChild[];
  */
 
-import {ReactNode} from "react";
+import { CSSProperties, ReactNode } from "react";
 
- type BoxProps = { children: ReactNode };
+ type BoxProps = { children: ReactNode , style?: CSSProperties };
 
- const Box = ({ children }: BoxProps) => {
+ const Box = ({ children , style={} }: BoxProps) => {
    return (
-     <section style={{ padding: "1em", border: "5px solid purple" }}>
+     <section style={{ padding: "1em", border: "5px solid purple", ...style }}>
        {children}
      </section>
    );
@@ -25,7 +25,7 @@ import {ReactNode} from "react";
      <Box>
        Just a string.
        <p>Some HTML that is not nested.</p>
-       <Box>
+       <Box style={{color: "red"}} >
          <h2>Another React component with one child.</h2>
        </Box>
        <Box>
